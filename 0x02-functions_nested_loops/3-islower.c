@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
  *_islower - checks for lowercase character
  *@c: character to check
@@ -16,7 +16,6 @@ int _islower(int c)
 	{
 		return (0);
 	}
-	_putchar('\n');
 
 }
 
