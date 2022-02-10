@@ -2,7 +2,6 @@
 #include<stdio.h>
 /**
  *main - first function
- *
  *Return: Always 0 (Success)
  */
 
@@ -21,6 +20,9 @@ int main(void)
 		else if (n == 100)
 			printf("Buzz");
 		else
+		{
 			printf("%d ", n);
+		}
 	}
+	printf("\n");
 }
