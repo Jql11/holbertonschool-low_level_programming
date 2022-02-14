@@ -6,22 +6,30 @@
  * Return: Always 0.
  */
 
-void print_rev(char *s)
+
+int _strlen(char *s)
 {
-	int length = 0;
-	int i = 0;
+	int len = 0;
 
 	while (*s != '\0')
 	{
-		length++;
+		len++;
 		s++;
 	}
 
+	return (len);
+}
 
-	for (i = length; i >= 0; i--)
+void print_rev(char *s)
+{
+	int length;
+	int i;
+
+	length = _strlen(s) - 1;
+	for (i = length; length >= 0; length--)
 	{
-		_putchar(*s);
-		s--;
+		_putchar(s[i]);
+		i--;
 	}
 	_putchar('\n');
 }
