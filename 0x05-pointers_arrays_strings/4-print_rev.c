@@ -2,6 +2,7 @@
 
 /**
  * print_rev - prints a string in reverse
+ * _strlen - length of a string
  *@s: string
  * Return: Always 0.
  */
