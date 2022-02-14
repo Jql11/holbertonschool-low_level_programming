@@ -32,10 +32,9 @@ void print_rev(char *s)
 	int i;
 
 	length = _strlen(s) - 1;
-	for (i = length; length >= 0; length--)
+	for (i = length; i >= 0; i--)
 	{
 		_putchar(s[i]);
-		i--;
 	}
 	_putchar('\n');
 }
