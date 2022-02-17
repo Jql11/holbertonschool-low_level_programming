@@ -19,7 +19,7 @@ char *rot13(char *s)
 		     'l', 'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W',
 		     'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 		     'J', 'K', 'L', 'M'};
-	int i; 
+	int i;
 	int j;
 
 	for (i = 0; s[i] != '\0'; i++)
