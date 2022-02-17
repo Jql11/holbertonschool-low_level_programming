@@ -3,35 +3,25 @@
 /**
  * leet - encodes a string into 1337
  *@s: character
- * Return: Always 0.
+ * Return: return string.
  */
+
+
+
 char *leet(char *s)
 {
-	int i = 0;
+	int a[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	int b[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	int i;
+	int j;
 
-	while (s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
+		for (j = 0; a[i] != '\0'; j++)
 		{
-			s[i] = '4';
+			if (s[i] == a[j])
+				s[i] = b[j];
 		}
-		else if (s[i] == 'e' || s[i] == 'E')
-		{
-			s[i] = '3';
-		}
-		else if (s[i] == 'o' || s[i] == 'O')
-		{
-			s[i] = '0';
-		}
-		else if (s[i] == 't' || s[i] == 'T')
-		{
-			s[i] = '7';
-		}
-		else if (s[i] == 'l' || s[i] == 'L')
-		{
-			s[i] = '1';
-		}
-		i++;
 	}
 	return (s);
 }
