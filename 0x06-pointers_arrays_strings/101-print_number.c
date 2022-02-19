@@ -1,23 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *digit_length - digit length in 100
- *@n: integer
- * Return: Always 0.
- */
-int digit_length(int n)
-{
-	int i = 1;
-
-	while (n != 0)
-	{
-		i = i * 10;
-		n = n / 10;
-	}
-	return (i / 10);
-}
-
-/**
 *length_digit - number of digit
 *@n: integer
 * Return: Always 0.
@@ -56,7 +39,6 @@ int myPow(int x, int y)
 */
 void print_number(int n)
 {
-	int pow = digit_length(n);
 	int d = length_digit(n);
 	int exp;
 
@@ -65,12 +47,12 @@ void print_number(int n)
 	else if (n < 0)
 	{
 		_putchar('-');
-		for (exp = 0; exp < d; exp++)
+		for (exp = d - 1; exp >= 0; exp--)
 		{
-			_putchar((n / (pow / myPow(10, exp)) % 10) * -1 + '0');
+			_putchar((n / (myPow(10, exp)) % 10) * -1 + '0');
 		}
 	}
 	else
-		for (exp = 0; exp < d; exp++)
-			_putchar(n / (pow / myPow(10, exp)) % 10 + '0');
+		for (exp = d - 1; exp >=  0; exp--)
+			_putchar((n / (myPow(10, exp))) % 10 + '0');
 }
