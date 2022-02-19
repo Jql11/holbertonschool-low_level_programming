@@ -18,7 +18,7 @@ int digit_length(int n)
 }
 
 /**
-*length_digit - digit length
+*length_digit - number of digit
 *@n: integer
 * Return: Always 0.
 */
