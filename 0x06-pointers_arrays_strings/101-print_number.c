@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *print_number - prints an integer
+ *digit_length - digit length in 100
  *@n: integer
  * Return: Always 0.
  */
@@ -16,7 +16,13 @@ int digit_length(int n)
 	}
 	return (i / 10);
 }
-int length_digit (int n)
+
+/**
+*length_digit - digit length
+*@n: integer
+* Return: Always 0.
+*/
+int length_digit(int n)
 {
 	int length = 0;
 
@@ -27,7 +33,12 @@ int length_digit (int n)
 	}
 	return (length);
 }
-
+/**
+*myPow - to the power of x
+*@x: base
+*@y: exponential
+* Return: Always 0.
+*/
 int myPow(int x, int y)
 {
 	int i;
@@ -38,7 +49,11 @@ int myPow(int x, int y)
 	return (number);
 }
 
-
+/**
+*print_number - prints an integer
+*@n: integer
+* Return: Always 0.
+*/
 void print_number(int n)
 {
 	int pow = digit_length(n);
