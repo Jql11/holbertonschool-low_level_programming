@@ -32,6 +32,9 @@ char *_strstr(char *haystack, char *needle)
 	int lenN = myStrlen(needle);
 	int lenH = myStrlen(haystack);
 
+	if (*needle == '\0')
+		return (haystack);
+
 	for (i = 0; i < lenH; i++)
 	{
 		for (j = 0; j < lenN; j++)
@@ -45,6 +48,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 	}
 	return (NULL);
-
 }
 
