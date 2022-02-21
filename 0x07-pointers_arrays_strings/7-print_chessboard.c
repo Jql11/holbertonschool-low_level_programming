@@ -4,7 +4,6 @@
 /**
  * print_chessboard - prints the chessboard
  *@a: character
- *@8: size of the chessboard
  * Return: Always 0.
  */
 
