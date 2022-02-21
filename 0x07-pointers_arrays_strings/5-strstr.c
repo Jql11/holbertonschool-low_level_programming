@@ -3,49 +3,39 @@
 #include <stdio.h>
 
 /**
- * myStrlen - lengthof a string
- * @s: string
- * Return: length
+ *compare - compare strings
+ *@X: string 1
+ *@Y: substring
+ *Return: value
  */
-int myStrlen(char *s)
+int compare(const char *X, const char *Y)
 {
-	int len = 0;
-
-	while (*s != '\0')
+	while (*X && *Y)
 	{
-		len++;
-		s++;
+		if (*X != *Y)
+		{
+			return (0);
+		}
+		X++;
+		Y++;
 	}
-	return (len);
+	return (*Y == '\0');
 }
-
 /**
- * _strstr - searches a string for any of a set of bytes
- * @haystack: initial string
- * @needle: substring containing the charcters in haystack
- * Return: a pointer to the beginning of the located substring
- */
-
+* _strstr - searches a string for any of a set of bytes
+* @haystack: initial string
+* @needle: substring containing the charcters in haystack
+* Return: a pointer to the beginning of the located substring
+*/
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
-	int lenN = myStrlen(needle);
-	int lenH = myStrlen(haystack);
-
 	if (*needle == '\0')
 		return (haystack);
-
-	for (i = 0; i < lenH && haystack[i] != '\0'; i++)
+	while (*haystack != '\0')
 	{
-		for (j = 0; j < lenN; j++)
-		{
-			if (haystack[i] ==  needle[j])
-				if (j == lenN - 1)
-				{
-					haystack = &haystack[i - lenN + 1];
-					return (haystack);
-				}
-		}
+		if ((*haystack == *needle) && compare(haystack, needle))
+				return (haystack);
+		haystack++;
 	}
 	return (NULL);
 }
