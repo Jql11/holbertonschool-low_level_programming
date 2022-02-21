@@ -10,7 +10,7 @@
  */
 int compare(const char *X, const char *Y)
 {
-	while (*X && *Y)
+	while (*Y != '\0')
 	{
 		if (*X != *Y)
 		{
@@ -19,7 +19,7 @@ int compare(const char *X, const char *Y)
 		X++;
 		Y++;
 	}
-	return (*Y == '\0');
+	return (1);
 }
 /**
 * _strstr - searches a string for any of a set of bytes
@@ -33,8 +33,11 @@ char *_strstr(char *haystack, char *needle)
 		return (haystack);
 	while (*haystack != '\0')
 	{
-		if ((*haystack == *needle) && compare(haystack, needle))
+		if (*haystack == *needle)
+		{
+			if (compare(haystack, needle) == 1)
 				return (haystack);
+		}
 		haystack++;
 	}
 	return (NULL);
