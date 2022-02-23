@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 *square - find the natural square root of a number
-*@k - mutiplier
-*@n - number
+*@k: mutiplier
+*@n: number
 *Return: return value
 */
 
@@ -27,6 +27,6 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0)
 		return (0);
-	else 
+	else
 		return (square(1, n));
 }
