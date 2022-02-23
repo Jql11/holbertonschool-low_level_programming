@@ -1,10 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 /**
-  *is_prime - find prime number
-  *@i: divider
-  *@n: integer
-  */
+ *is_prime - find prime number
+ *@i: divider
+ *@n: integer
+ *Return: value
+ */
 
 int is_prime(int i, int n)
 {
@@ -17,10 +17,10 @@ int is_prime(int i, int n)
 }
 
 /**
- * _prime_number - find prime number
+ * is_prime_number - find prime number
  *@n: integer
  * Return: if is prime, return 1 otherwise 0
-*/ 
+*/
 int is_prime_number(int n)
 {
 	if (n <= 1)
