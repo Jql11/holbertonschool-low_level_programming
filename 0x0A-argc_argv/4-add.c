@@ -10,10 +10,14 @@
 
 int is_digit(char *s)
 {
-	if (*s >= '0' && *s <= '9')
-		return (1);
-	else
-		return (0);
+	while (*s != '\0')
+	{
+		if (*s >= '0' && *s <= '9')
+			s++;
+		else
+			return (0);
+	}
+	return (1);
 }
 /**
   *main - main function
