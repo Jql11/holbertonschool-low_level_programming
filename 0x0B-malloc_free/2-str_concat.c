@@ -2,7 +2,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ *_strlen - returns the length of a string
+ *@s: character
+ *
+ *Return: Always 0 (Success)
+ */
+int _strlen(char *s)
+{
+	int len = 0;
 
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
+}
 
 /**
  *str_concat - concatenate two string
@@ -14,17 +31,17 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *p;
-	int i;
-	int j;
-	int len1 = 0;
-	int len2 = 0;
+	int i = 0;
+	int j = 0;
+	int len1;
+	int len2;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (i = 0; *(s1 + i) != '\0'; i++, len1++)
-	for (j = 0; *(s2 + j) != '\0'; j++, len2++)
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
 	p = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (p == NULL)
 		return (NULL);
