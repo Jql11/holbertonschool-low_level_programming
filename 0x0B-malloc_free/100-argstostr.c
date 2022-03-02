@@ -20,8 +20,9 @@ int _strlen(char *s)
 	return (len);
 }
 /**
- * main - check the code
- *
+ * argstostr - concatenates all the arguments of your program
+ *@ac: the amount of the string
+ *@av: pointer to the pointer of array
  * Return: Always 0.
  */
 
@@ -49,7 +50,7 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; j < _strlen(av[i]); j++)
 		{
-			p[k] = av[i][j]; 
+			p[k] = av[i][j];
 			k++;
 		}
 		p[k] = '\n';
