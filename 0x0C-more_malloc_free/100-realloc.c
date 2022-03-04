@@ -4,9 +4,9 @@
 #include <string.h>
 
 /**
- * realloc - reallocates a memory block 
- * @ptr: pointer to the meomry previously allocated 
- * @old_size: old size 
+ * _realloc - reallocates a memory block
+ * @ptr: pointer to the meomry previously allocated
+ * @old_size: old size
  * @new_size: new size
  * Return: Nothing.
  */
