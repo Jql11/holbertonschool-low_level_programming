@@ -32,14 +32,11 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 	{
-		free(str);
 		return (NULL);
 	}
 	length = _strlen(str);
 	p = malloc(sizeof(char) * (length + 1));
 	if (p == NULL)
-	{
-		free(p);
 		return (NULL);
 	for (i = 0; i <= length; i++)
 	{
@@ -65,7 +62,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (p == NULL)
 	{
-		free(p);
 		return (NULL);
 	}
 	p->age = age;
@@ -87,3 +83,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	return (p);
 }
+
+
+
