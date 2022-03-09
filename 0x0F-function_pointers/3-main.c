@@ -4,11 +4,11 @@
 /**
  * main - check the code
  *@argc: number of arguments
- *@argv[]: pointer array
+ *@argv: pointer array
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
-{	
+{
 	int (*f)(int, int);
 
 	if (argc != 4)
