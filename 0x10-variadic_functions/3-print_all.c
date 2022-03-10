@@ -5,7 +5,7 @@
  * print_all - print everything
  * @format: list of types of arguments
  * Return: 0
-*/ 
+*/
 
 void print_all(const char * const format, ...)
 {
