@@ -22,15 +22,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	else if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == 0)
+	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	else
-	{
-		printf("%d\n", f(atoi(argv[1]), atoi(argv[3])));
-	}
+	printf("%d\n", f(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 
 }
