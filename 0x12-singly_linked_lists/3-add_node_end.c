@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * _strlen - find string length
  * @str: string
@@ -18,14 +17,14 @@ int _strlen(const char *str)
 }
 
 /**
-  *add_node - adds a new node at the beginning of a list_t list
+  *add_node - adds a new node at the end of a list_t list
   *@head: head
   *@str: string
   *Return: the address of the new element or NULL if it failed
   */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-
+	list_t *temp;
 	list_t *new = malloc(sizeof(list_t));
 
 	if (new == NULL)
@@ -35,13 +34,19 @@ list_t *add_node(list_t **head, const char *str)
 
 	new->str = strdup(str);
 	new->len = _strlen(str);
+	new->next = NULL;
+	
+	temp = *head;
 	if (*head == NULL)
-		new->next = NULL;
+		*head = new;
 	else
 	{
-		new->next = (*head);
+		while(temp->next != NULL)
+		{
+			temp = temp->next;
+		}
+		temp->next = new;
 	}
-	(*head) = new;
 
 	return (new);
 }
