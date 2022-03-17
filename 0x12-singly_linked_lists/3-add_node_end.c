@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 #include "lists.h"
 /**
  * _strlen - find string length
@@ -29,18 +32,17 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (new == NULL)
 		return (NULL);
-	if (str == NULL)
-		return (NULL);
-
 	new->str = strdup(str);
+	if (strdup(str) == NULL)
+		return (NULL);
 	new->len = _strlen(str);
 	new->next = NULL;
 
-	temp = *head;
 	if (*head == NULL)
 		*head = new;
 	else
 	{
+		temp = *head;
 		while (temp->next != NULL)
 		{
 			temp = temp->next;
