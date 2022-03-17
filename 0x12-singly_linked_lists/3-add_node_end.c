@@ -28,16 +28,21 @@ int _strlen(const char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
-	list_t *new = malloc(sizeof(list_t));
+	list_t *new;
 
-	if (new == NULL)
-		return (NULL);
 	if (str == NULL)
 		return (NULL);
+	if (strdup(str) == NULL)
+		return (NULL);
+
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
+
 	new->str = strdup(str);
 	new->len = _strlen(str);
 	new->next = NULL;
-
+/*If the Linked List is empty, then make the new node as head */
 	if (*head == NULL)
 		*head = new;
 	else
