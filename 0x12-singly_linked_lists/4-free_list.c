@@ -4,8 +4,8 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
+ * free_list - fress a list
+ *@head: head
  * Return: Always 0.
  */
 void free_list(list_t *head)
@@ -14,10 +14,10 @@ void free_list(list_t *head)
 
 	while (head != NULL)
 	{
-		tmp = head;/*Save the head in a tmp variable, and make head point to the next node on your list*/
+		tmp = head;
 		head = head->next;
 		free(tmp->str);
-		free(tmp);/*head just points to the rest of the list, go back to step 1*/
+		free(tmp);
 	}
 
 }
