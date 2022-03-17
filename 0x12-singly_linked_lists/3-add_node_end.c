@@ -20,7 +20,7 @@ int _strlen(const char *str)
 }
 
 /**
-  *add_node - adds a new node at the end of a list_t list
+  *add_node_end - adds a new node at the end of a list_t list
   *@head: head
   *@str: string
   *Return: the address of the new element or NULL if it failed
@@ -28,16 +28,13 @@ int _strlen(const char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp;
-	list_t *new;
+	list_t *new = malloc(sizeof(list_t));
 
-	if (str == NULL)
-		return (NULL);
-	if (strdup(str) == NULL)
-		return (NULL);
-
-	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
+	if (str == NULL)
+		return (NULL);
+
 
 	new->str = strdup(str);
 	new->len = _strlen(str);
