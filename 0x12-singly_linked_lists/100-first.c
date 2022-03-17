@@ -1,13 +1,12 @@
 #include <stdio.h>
-
+#include "lists.h"
 /**
- * myStartupFun -  startup code can be executed before main() starts
+ * before_main -  startup code can be executed before main() starts
  *
- * Return: Always 0.
+ * Return: nothing
  */
-void myStartupFun(void) __attribute__ ((constructor));
-
-void myStartupFun(void)
+void before_main(void) __attribute__((constructor));
+void before_main(void)
 {
 	printf("You're beat! and yet,you must allow,\n");
 	printf("I bore my house upon my back!\n");
