@@ -54,8 +54,7 @@ int main(int argc, char **argv)
 		close(fdcp);
 		exit(98);
 	}
-	r = read(fd, buffer, 1024);
-	while (r != 0)
+	while ((r = read(fd, buffer, 1024)) != 0)
 	{
 		if (r == -1)
 		{
